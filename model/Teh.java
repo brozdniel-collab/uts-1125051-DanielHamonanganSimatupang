@@ -13,6 +13,6 @@ public class Teh extends MenuItem{
 
     @Override 
     public String getOrderDetail(){
-        return "";
+        return "ID: "+getId()+" -Nama: "+getNama()+" -hargaBase : "+getHargaBase()+" -Stock :"+getStock();
     }
 }

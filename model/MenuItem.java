@@ -15,7 +15,7 @@ public abstract class MenuItem {
     }
     
     abstract double hitungHargaTotal();
-    abstract String getOrderDetail();
+    abstract public String getOrderDetail();
 
     public String getId() {
         return id;
