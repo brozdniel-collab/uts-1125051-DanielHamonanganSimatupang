@@ -1,6 +1,6 @@
 package model;
 
-enum EnumUkuran{
+public enum EnumUkuran{
     SMALL,
     MEDIUM,
     LARGE
