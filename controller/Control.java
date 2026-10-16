@@ -55,7 +55,7 @@ public class Control {
             throws StokTidakCukupException1 {
 
 
-        if (jumlah > item.getStok()) {
+        if (jumlah > item.getStock()) {
             throw new StokTidakCukupException1("Stok tidak cukup!");
         }
     }

@@ -88,7 +88,6 @@ public class Main {
 
             double total =item.hitungHargaTotal(jumlah,EnumUkuran.MEDIUM);
 
-            item.kurangiStok(jumlah);
 
             System.out.println("\n===== STRUK =====");
             System.out.println(
@@ -105,5 +104,3 @@ public class Main {
         }
     }
 }
-
-// OK
