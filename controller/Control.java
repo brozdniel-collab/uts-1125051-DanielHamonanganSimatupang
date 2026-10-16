@@ -1,13 +1,14 @@
 package controller;
-import java.awt.List;
+import java.util.ArrayList;
+import java.util.List;
 import model.MenuItem;
-import model.EnumUkuran;
-import model.Kopi;
-import model.Roti;
-import model.Teh;
+import util.InputUtil;
 
 public class Control {
-    void pemanggil(List<MenuItem> barang){
-        
+    private List<MenuItem> menu = new ArrayList<>();
+
+    public String MasukID(){
+        return InputUtil.inputString("");
     }
+
 }

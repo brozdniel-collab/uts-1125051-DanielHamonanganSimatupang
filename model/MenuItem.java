@@ -2,12 +2,12 @@ package model;
 
 
 public abstract class MenuItem {
-    private int id;
+    private String id;
     private String nama;
     private int stock;
     private int hargaBase;
 
-    public MenuItem(int id , String nama , int stock , int hargabase){
+    public MenuItem(String id , String nama , int stock , int hargabase){
         this.id = id;
         this.nama = nama;
         this.stock = stock;
@@ -17,11 +17,11 @@ public abstract class MenuItem {
     abstract double hitungHargaTotal();
     abstract String getOrderDetail();
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

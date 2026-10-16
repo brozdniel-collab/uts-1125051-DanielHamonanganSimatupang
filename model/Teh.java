@@ -1,11 +1,8 @@
 package model;
-import model.MenuItem;
-import model.EnumUkuran;
-import model.Customizable;
 
 public class Teh extends MenuItem{
     
-    public Teh(int id , String nama , int hargaBase , int stok){
+    public Teh(String id , String nama , int hargaBase , int stok){
         super(id, nama, stok, hargaBase);
     }
 
@@ -18,6 +15,4 @@ public class Teh extends MenuItem{
     public String getOrderDetail(){
         return "";
     }
-
-
 }
