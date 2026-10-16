@@ -1,8 +1,14 @@
 package model;
 
+import java.util.List;
 
-public abstract class Teh extends MenuItem{
-    String kodePromo1 = "TEH1";
+public abstract class Teh extends MenuItem implements Customizable{
+    private String kodePromo1 = "TEH1";
+
+    private int boba;
+    private int es;
+    private int gula;
+    private int karamel;
 
 
     public Teh(String id , String nama , int hargaBase , int stok){
@@ -33,9 +39,26 @@ public abstract class Teh extends MenuItem{
         return 0;
         }
     }
- 
+     @Override
+    public void customize(List<Integer> custom) {
+
+        boba = custom.get(0);
+        es = custom.get(1);
+        gula = custom.get(2);
+        karamel = custom.get(3);
+    }
+
+    @Override
+    public void customize(int[] custom) {
+
+        boba = custom[0];
+        es = custom[1];
+        gula = custom[2];
+        karamel = custom[3];
+    }
+
     @Override 
     public String getOrderDetail(){
-        return "ID: "+getId()+" -Nama: "+getNama()+" -hargaBase : "+getHargaBase()+" -Stock :"+getStock();
+        return "ID: "+getId()+" -Nama: "+getNama()+" -Stock :"+getStock();
     }
 }

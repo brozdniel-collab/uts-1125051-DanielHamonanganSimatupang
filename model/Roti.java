@@ -1,7 +1,14 @@
 package model;
 
-public abstract class  Roti extends MenuItem {
-    String kodePromo1 = "ROTI1";
+import java.util.List;
+
+public abstract class  Roti extends MenuItem implements Customizable {
+    private String kodePromo1 = "ROTI1";
+
+
+    private int gula;
+    private int meses;
+    private int karamel;
 
     public Roti(String id , String nama , int hargaBase , int stok){
         super(id, nama, stok, hargaBase);
@@ -30,6 +37,21 @@ public abstract class  Roti extends MenuItem {
             }
         return 0;
         }
+    }
+    @Override
+    public void customize(List<Integer> custom) {
+
+        gula = custom.get(0);
+        meses = custom.get(1);
+        karamel = custom.get(2);
+    }
+
+    @Override
+    public void customize(int[] custom) {
+
+        gula = custom[0];
+        meses = custom[1];
+        karamel = custom[2];
     }
     @Override 
     public String getOrderDetail(){
