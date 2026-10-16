@@ -1,16 +1,39 @@
 package model;
 
-public class Teh extends MenuItem{
-    
+
+public abstract class Teh extends MenuItem{
+    String kodePromo1 = "TEH1";
+
+
     public Teh(String id , String nama , int hargaBase , int stok){
         super(id, nama, stok, hargaBase);
     }
 
-    @Override
-    public double hitungHargaTotal(){
-        return 0.1;
+    public double hitungHargaTotal(int jumlah){
+        return jumlah * getHargaBase();
     }
-
+    public double hitungHargaTotal(int jumlah, String kodePromo){
+        double promo;
+        if(kodePromo1 == kodePromo){
+            return 0.2 * hitungHargaTotal(jumlah);
+        }
+        return hitungHargaTotal(jumlah);
+    }
+    public double hitungHargaTotal(int jumlah, EnumUkuran ukuran){
+        if(ukuran == EnumUkuran.SMALL){
+            return 2000 + hitungHargaTotal(jumlah);
+        }else{
+            if(ukuran == EnumUkuran.MEDIUM){
+                return 5000 + hitungHargaTotal(jumlah);
+            }else{
+                if(ukuran == EnumUkuran.LARGE){
+                    return 10000 + hitungHargaTotal(jumlah);
+                }
+            }
+        return 0;
+        }
+    }
+ 
     @Override 
     public String getOrderDetail(){
         return "ID: "+getId()+" -Nama: "+getNama()+" -hargaBase : "+getHargaBase()+" -Stock :"+getStock();

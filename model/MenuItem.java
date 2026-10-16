@@ -1,6 +1,5 @@
 package model;
 
-
 public abstract class MenuItem {
     private String id;
     private String nama;
@@ -14,7 +13,7 @@ public abstract class MenuItem {
         this.hargaBase = hargabase;
     }
     
-    abstract double hitungHargaTotal();
+    abstract public double hitungHargaTotal();
     abstract public String getOrderDetail();
 
     public String getId() {

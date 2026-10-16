@@ -11,6 +11,7 @@ public class Utama {
             System.out.println("(1)Kopi \n(2)Teh \n(3)Roti");
             int choice = control.MasukStock(); //Yang penting si method return INT :)
 
+            control.tampilanMenuawal();
             switch (choice) {
                 case 2:
                     System.out.println("Masukkan ID Teh : ");
@@ -35,7 +36,5 @@ public class Utama {
             }
 
         }
-
-
     }
 }
